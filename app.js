@@ -57,7 +57,7 @@ function problemDraw(problem) {
   const problemLi = document.createElement("li");
   problemLi.classList.add("problemItem");
   problemLi.innerHTML = `
-                    <a href="https://school.programmers.co.kr/learn/courses/30/lessons/${problem.id}">
+                    <a href="https://school.programmers.co.kr/learn/courses/30/lessons/${problem.id}" target="_blank">
                         <h2 class="problemTitle">${problem.title}</h2>
                         <p class="partTitle">${problem.partTitle}</p>
                     </a>
