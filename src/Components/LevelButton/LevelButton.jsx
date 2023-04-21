@@ -15,6 +15,6 @@ const LevelBtn = styled.button`
     background-color: #0078ff;
   }
 `;
-export const LevelButton = () => {
-  return <LevelBtn>Lv.0</LevelBtn>;
+export const LevelButton = ({ num }) => {
+  return <LevelBtn>Lv.{num}</LevelBtn>;
 };
