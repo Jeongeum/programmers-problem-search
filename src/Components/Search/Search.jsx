@@ -47,11 +47,11 @@ export const Search = () => {
         <SearchBtn>검색</SearchBtn>
       </form>
       <BtnWrapper>
-        <LevelButton />
-        <LevelButton />
-        <LevelButton />
-        <LevelButton />
-        <LevelButton />
+        <LevelButton num={1} />
+        <LevelButton num={2} />
+        <LevelButton num={3} />
+        <LevelButton num={4} />
+        <LevelButton num={5} />
       </BtnWrapper>
     </SearchWrapper>
   );
