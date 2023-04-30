@@ -38,7 +38,7 @@ const BtnWrapper = styled.div`
   margin-top: 1.3rem;
 `;
 
-export const Search = () => {
+export const Search = ({ onClickLevelChange }) => {
   return (
     <SearchWrapper>
       <SearchTitle>프로그래머스 문제 검색 사이트</SearchTitle>
@@ -47,11 +47,13 @@ export const Search = () => {
         <SearchBtn>검색</SearchBtn>
       </form>
       <BtnWrapper>
-        <LevelButton num={1} />
-        <LevelButton num={2} />
-        <LevelButton num={3} />
-        <LevelButton num={4} />
-        <LevelButton num={5} />
+        <LevelButton level={"all"} onClickLevelChange={onClickLevelChange} />
+        <LevelButton level={0} onClickLevelChange={onClickLevelChange} />
+        <LevelButton level={1} onClickLevelChange={onClickLevelChange} />
+        <LevelButton level={2} onClickLevelChange={onClickLevelChange} />
+        <LevelButton level={3} onClickLevelChange={onClickLevelChange} />
+        <LevelButton level={4} onClickLevelChange={onClickLevelChange} />
+        <LevelButton level={5} onClickLevelChange={onClickLevelChange} />
       </BtnWrapper>
     </SearchWrapper>
   );

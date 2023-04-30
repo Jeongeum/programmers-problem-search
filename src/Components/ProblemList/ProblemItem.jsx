@@ -30,9 +30,14 @@ export const ProblemItem = ({ problem }) => {
   const { title, partTitle, level } = problem;
   return (
     <ProblemLi>
-      <ProblemTitle>{title}</ProblemTitle>
-      <PartTitle>{partTitle}</PartTitle>
-      <LevelSpan>Lv.{level}</LevelSpan>
+      <a
+        href={`https://school.programmers.co.kr/learn/courses/30/lessons/${problem.id}`}
+        target="_black"
+      >
+        <ProblemTitle>{title}</ProblemTitle>
+        <PartTitle>{partTitle}</PartTitle>
+        <LevelSpan>Lv.{level}</LevelSpan>
+      </a>
     </ProblemLi>
   );
 };
