@@ -1,16 +1,22 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { ProblemItem } from "./ProblemItem";
+import styled from "styled-components";
 
-export const ProblemList = ({ filteredProblems }) => {
-  console.log(filteredProblems);
+const ProblemListWrapper = styled.section`
+  height: 665px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+`;
+export const ProblemList = forwardRef(({ filteredProblems }, ref) => {
   return (
-    <section>
+    <ProblemListWrapper>
       <h2 className="ir">문제 리스트</h2>
       <ul>
         {filteredProblems.map((problem) => {
           return <ProblemItem problem={problem} key={problem.id} />;
         })}
+        <div ref={ref}></div>
       </ul>
-    </section>
+    </ProblemListWrapper>
   );
-};
+});

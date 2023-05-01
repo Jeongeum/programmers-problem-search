@@ -36,8 +36,8 @@ export const ProblemItem = ({ problem }) => {
       >
         <ProblemTitle>{title}</ProblemTitle>
         <PartTitle>{partTitle}</PartTitle>
-        <LevelSpan>Lv.{level}</LevelSpan>
       </a>
+      <LevelSpan>Lv.{level}</LevelSpan>
     </ProblemLi>
   );
 };
