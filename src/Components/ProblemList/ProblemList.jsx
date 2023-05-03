@@ -15,7 +15,7 @@ export const ProblemList = forwardRef(({ filteredProblems }, ref) => {
         {filteredProblems.map((problem) => {
           return <ProblemItem problem={problem} key={problem.id} />;
         })}
-        <div ref={ref}></div>
+        <div ref={ref}>여기</div>
       </ul>
     </ProblemListWrapper>
   );
