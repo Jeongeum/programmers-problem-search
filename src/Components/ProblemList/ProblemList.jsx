@@ -7,16 +7,18 @@ const ProblemListWrapper = styled.section`
   overflow-x: hidden;
   overflow-y: scroll;
 `;
-export const ProblemList = forwardRef(({ filteredProblems }, ref) => {
-  return (
-    <ProblemListWrapper>
-      <h2 className="ir">문제 리스트</h2>
-      <ul>
-        {filteredProblems.map((problem) => {
-          return <ProblemItem problem={problem} key={problem.id} />;
-        })}
-        <div ref={ref}>여기</div>
-      </ul>
-    </ProblemListWrapper>
-  );
-});
+export const ProblemList = React.memo(
+  forwardRef(({ filteredProblems }, ref) => {
+    console.log("🚀 ProblemList 렌더링", filteredProblems);
+    return (
+      <ProblemListWrapper>
+        <h2 className="ir">문제 리스트</h2>
+        <ul>
+          {filteredProblems.map((problem) => {
+            return <ProblemItem problem={problem} key={problem.id} />;
+          })}
+        </ul>
+      </ProblemListWrapper>
+    );
+  })
+);
