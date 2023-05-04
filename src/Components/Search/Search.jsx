@@ -4,7 +4,7 @@ import { LevelButton } from "../LevelButton/LevelButton";
 
 const SearchWrapper = styled.section`
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const SearchTitle = styled.h2`

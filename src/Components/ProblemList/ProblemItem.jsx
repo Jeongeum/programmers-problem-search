@@ -10,6 +10,12 @@ const ProblemLi = styled.li`
   justify-content: space-between;
   padding: 1rem 2rem;
   align-items: center;
+
+  a {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+  }
 `;
 
 const ProblemTitle = styled.h3`
