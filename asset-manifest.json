@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/programmers-problem-search/static/js/main.5bc348b0.js",
+    "main.js": "/programmers-problem-search/static/js/main.63a08c83.js",
     "index.html": "/programmers-problem-search/index.html",
-    "main.5bc348b0.js.map": "/programmers-problem-search/static/js/main.5bc348b0.js.map"
+    "main.63a08c83.js.map": "/programmers-problem-search/static/js/main.63a08c83.js.map"
   },
   "entrypoints": [
-    "static/js/main.5bc348b0.js"
+    "static/js/main.63a08c83.js"
   ]
 }
