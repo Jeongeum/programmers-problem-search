@@ -38,12 +38,16 @@ const BtnWrapper = styled.div`
   margin-top: 1.3rem;
 `;
 
-export const Search = ({ onClickLevelChange }) => {
+export const Search = ({ onClickLevelChange, onChangeSearch, keyword }) => {
   return (
     <SearchWrapper>
       <SearchTitle>프로그래머스 문제 검색 사이트</SearchTitle>
       <form>
-        <SearchInput type="text"></SearchInput>
+        <SearchInput
+          type="text"
+          value={keyword}
+          onChange={onChangeSearch}
+        ></SearchInput>
         <SearchBtn>검색</SearchBtn>
       </form>
       <BtnWrapper>

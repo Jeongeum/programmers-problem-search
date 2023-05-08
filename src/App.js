@@ -4,6 +4,7 @@ import { Container } from "./Components/Container/Container";
 import { ProblemList } from "./Components/ProblemList/ProblemList";
 import { Search } from "./Components/Search/Search";
 import { PagiNation } from "./Components/PagiNation/PagiNation";
+import DebounceValue from "./hooks/useDebounce";
 
 function App() {
   const [problemData, setProblemData] = useState([]);
@@ -52,14 +53,33 @@ function App() {
     setLevel(level);
   };
 
+  // 문제 검색
+  const [keyword, setKeyword] = useState("");
+
+  const printValue = DebounceValue(keyword, 300);
+
+  const onChangeSearch = (e) => {
+    setKeyword(e.target.value);
+  };
+
   return (
     <Container>
-      <Search onClickLevelChange={onClickLevelChange} />
+      <Search
+        onClickLevelChange={onClickLevelChange}
+        onChangeSearch={onChangeSearch}
+        keyword={keyword}
+      />
       <ProblemList
         data={
-          level === "all"
-            ? sliceData(problemData)
-            : problemData.filter((problem) => problem.level === Number(level))
+          keyword === ""
+            ? level === "all"
+              ? sliceData(problemData)
+              : problemData.filter((problem) => problem.level === Number(level))
+            : sliceData(
+                problemData.filter((problem) =>
+                  problem.title.includes(printValue)
+                )
+              )
         }
       />
       {isLoading && <div>Loading…</div>}
