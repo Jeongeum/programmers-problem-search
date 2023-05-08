@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 👩🏻‍💻 프로그래머스 문제 검색 사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+프로그래머스 내에서 문제를 검색할 수 있는 사이트
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[🔗 배포 페이지](https://jeongeum.github.io/programmers-problem-search/)
 
-### `npm test`
+| <img width="350" alt="문제검색기능gif" src="https://user-images.githubusercontent.com/77143425/199497101-abe91f3f-b04b-4001-a6ed-4201b1f74683.gif"/> | <img width="350" alt="레벨별문제검색기능gif" src="https://user-images.githubusercontent.com/77143425/199497430-4c917fff-49d8-49bb-9f12-18882e2200cf.gif"/> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💭 개발 취지
 
-### `npm run build`
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/77143425/199442388-2819d8ec-7932-402c-a656-17bea3a462e0.PNG">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+나는 평소 코딩테스트 준비를 위해 프로그래머스의 문제를 풀고 있다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+현재 소속되어있는 부트캠프에서도 많은 동료들이 프로그래머스 문제를 함께 푸는데 한 동료 분의 질문으로 **문제 제목**만으로는 사이트 내에서 **검색이 불가능**하다는 것을 알았다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+코딩 테스트 준비를 위해 프로그래머스를 사용하고 있고 앞으로도 꾸준히 사용할 유저의 입장에서 필요한 기능이 구현되어있지 않다고 생각했고 **불편함을 해소하기 위해** 직접 구현을 해보기로 했다.<br><br>
 
-### `npm run eject`
+## ✅ 커밋 컨벤션
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- feat : 새로운 기능 구현
+- fix : 오류 수정
+- test : 테스트 추가, 수정
+- docs : readme.md, json 파일 등 수정 and 라이브러리 설치 (문서 관련)
+- design : 마크업 및 css
+- style : 코드에 변화가 없는 수정 (세미콜론 등)
+- refactor : 코드 리팩토링
+- rename : 파일 혹은 폴더명 수정 or 옮기기
+- remove : 파일 삭제
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✨ 기능
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| 전체 문제 | 레벨 별 문제 검색| 키워드 검색| 페이지네이션|
+|----|----|----|----|
+| ![전체문제](https://user-images.githubusercontent.com/77143425/236782109-fbef5046-2918-4cc5-b941-78b8191dde6a.gif) | ![레벨별검색](https://user-images.githubusercontent.com/77143425/236782149-f3baa712-2d13-4c8f-97a9-9c433134d6c2.gif) | ![키워드검색](https://user-images.githubusercontent.com/77143425/236782139-f992fe96-042c-425c-86f0-4f024dc7ac30.gif) | ![페이지네이션](https://user-images.githubusercontent.com/77143425/236782123-29fe0962-166a-4a70-99e1-7dc148e64378.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+JS 버전에서 추가로 구현해보고 싶었던 `페이지네이션`과 `input 검색 활성화`를 추가로 진행했다.
