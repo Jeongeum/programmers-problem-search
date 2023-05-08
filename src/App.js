@@ -50,6 +50,7 @@ function App() {
 
   // 레벨 별로 문제 보여주기
   const onClickLevelChange = (level) => {
+    setKeyword("");
     setLevel(level);
   };
 
