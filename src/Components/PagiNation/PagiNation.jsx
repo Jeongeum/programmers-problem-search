@@ -20,8 +20,8 @@ const PageBtn = styled.button`
 export const PagiNation = ({ limit, page, totalProblem, setPage }) => {
   const numPages = Math.ceil(totalProblem / limit); // 몇개의 페이지가 필요한지
   const [currPage, setCurrPage] = useState(page); // 현재 페이지
-  let firstNum = currPage - (currPage % 5) + 1;
-  let lastNum = currPage - (currPage % 5) + 5;
+  let firstNum = currPage - (currPage % 5) + 1; // 페이지네이션에서 첫 숫자
+  let lastNum = currPage - (currPage % 5) + 5; // 페이지네이션에서 마지막 숫자
 
   return (
     <PagiNationSection>
